@@ -1,0 +1,708 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project: Volt
+Version: 1.0
+Last change: 11/04/2017 [First Release]
+Primary use: Websites 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+	1.1. Body Typography
+	1.2. Body Responsive Typography
+	1.3. Paddings
+2. Buttons
+3. Navigation Bar
+    3.1. Navigation Bar Main
+    3.2 Navigation Bar Brand
+    3.3. Navigation Bar Links
+    3.4. Navigation Bar Toggle
+    3.5. Navigation Bar Responsive
+4. Header Class
+	4.1. Header Class Intro
+	4.2. Header Class Intro Responsive Style
+5. About Class
+    5.1. About Class Icon
+    5.2. About Class Content Body
+    5.3. About Class Content Body Responsive Style
+6. Features Class
+    6.1. Features Class Main Content Body
+	6.2. Features Class Main Content Body Image
+    6.3. Features Class Main Content Body Responsive Style
+7. Subscribe Class
+    7.1. Subscribe Class Content
+    7.2. Subscribe Class Form
+    7.3. Subscribe Class Responsive Style
+8. App Class
+	8.1. App Image
+	8.2. App Content
+	8.3. App Class Body Responsive Style
+9. Contact Class
+	9.1. Contact Class Content
+	9.2. Contact Class Form
+	9.3. Contact Class Body Responsive Style
+10. Footer Class
+-------------------------------------------------------------------*/
+
+/* 1. Body */
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: #222222;
+}
+
+/* 1.1. Body Typography */
+
+h1 { font-size: 48px; }
+
+h2 { font-size: 36px; }
+
+h3 { font-size: 25px; }
+
+h4 { font-size: 19px; }
+
+p { font-size: 16px; font-weight: 300; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 1.2. Body Responsive Typography */
+
+@media(max-width: 767px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 21px; }
+	h4 { font-size: 17px; }
+}
+
+/* 1.3. Paddings */
+
+.pb-40-px { padding-bottom: 40px; }
+
+/* 2. Buttons */
+
+.btn {
+    border-width: 2px;
+    padding: 10px 34px;
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-transition: all 0.125s ease-in-out;
+    -moz-transition: all 0.125s ease-in-out;
+    -ms-transition: all 0.125s ease-in-out;
+    -o-transition: all 0.125s ease-in-out;
+    transition: all 0.125s ease-in-out;
+}
+
+.btn.focus, .btn:focus .btn.active.focus, .btn.active:focus, .btn:active.focus, .btn:active:focus {
+    outline: 0;
+}
+
+/* 2.1. Button Styles */
+
+.btn.btn-white-outline {
+	border: 1px solid #FFFFFF;
+	background-color: transparent;
+	color: #FFFFFF;
+	transition: all 0.30s ease;
+}
+
+.btn.btn-white-outline:hover {
+    border: 1px solid transparent;
+    background: #FFFFFF;
+    color: #222222;
+    transition: all 0.30s ease;
+}
+
+.btn.btn-dark {
+    border: 1px solid #121212;
+    background-color: #121212;
+    color: #FFFFFF;
+    transition: all 0.30s ease;
+}
+
+.btn.btn-dark:hover {
+    border: 1px solid transparent;
+    background: #1F1E1E;
+    color: #FFFFFF;
+    transition: all 0.30s ease;
+}
+
+/* 3. Navigation Bar  */
+
+/* 3.1. Navigation Bar Main  */
+
+.navbar-default {
+    background: transparent;
+    border-color: rgba(255, 255, 255, .8);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    padding: 15px 0;
+}
+
+/* 3.2. Navigation Bar Brand  */
+
+.navbar-default .navbar-brand {
+    padding: 0px;
+}
+
+.navbar-brand > img {
+    height: 100%;
+    padding: 10px 15px;
+    width: auto;
+}
+
+/* 3.3. Navigation Bar Links */
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding-left: 40px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #FFFFFF;
+	background-color: transparent;
+}
+
+/* 3.4. Navigation Bar Toggle */
+
+.navbar-default .navbar-collapse, .navbar-default {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #222222;
+}
+
+.navbar-toggle span {
+    color: #FFFFFF;
+}
+
+/* 3.5. Navigation Bar Responsive */
+
+@media(max-width: 767px) {
+	.navbar-default {
+		box-shadow: none;
+        border: none;
+        background-color: #111111;
+	}
+}
+
+@media(min-width: 768px) {
+    .navbar-default.affix {
+        padding: 5px;
+        background-color: #111111;
+        border: none;
+    }
+    .navbar-default.affix .nav > li > a,
+    .navbar-default.affix .nav > li > a:focus {
+        color: #8c8c8c;
+    }
+    .navbar-default.affix .navbar-nav > .active > a, 
+    .navbar-default.affix .navbar-nav > .active > a:hover, 
+    .navbar-default.affix .navbar-nav > .active > a:focus {
+        color: #FFFFFF;
+    }
+    .navbar-default.affix .nav > li > a:hover,
+    .navbar-default.affix .nav > li > a:focus:hover {
+        color: #FFFFFF;
+        border-bottom: none;
+    }
+}
+
+/* 4. Header */
+
+.header {
+	background: #00c6ff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color: #FFFFFF;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 767px) {
+    .header {
+        top: auto;
+        left: auto;
+    }
+}
+
+/* 4.1. Header Intro */
+
+.header .intro-section {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header .intro-section .logo img {
+    text-align: center;
+	margin: 0 auto;
+}
+
+.header .intro-section p {
+    padding: 10px 0px 20px 0px;
+	font-weight: 300;
+}
+
+/* 4.2. Header Intro Responsive Style */
+
+@media(max-width: 992px) {
+    .header .intro-section .logo img {
+        margin: 0 auto;
+    }
+    .header .intro-section {
+        text-align: center;
+        padding: 10% 0 5% 0;
+    }
+    .header .social-icons {
+        float: none;
+        text-align: center;
+    }
+}
+
+/* 5. About Section */
+
+.about {
+    background-color: #EEF1F4;
+    padding: 80px 0px;
+	-webkit-box-shadow: 0px 6px 25px 9px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 6px 25px 9px rgba(0,0,0,0.55);
+	box-shadow: 0px 6px 25px 9px rgba(0,0,0,0.55);
+}
+
+.about h4 {
+    font-weight: 400;
+}
+
+/* 5.1. About Class Icon */
+
+.about .icon-container {
+	height: 80px;
+    width: 80px;
+    line-height: 75px;
+    display: block;
+    margin: 0 auto;
+}
+
+.about .icon-container img {
+    height: 52px;
+    width: 52px;
+    line-height: 75px;
+    display: block;
+    margin: 0 auto;
+	text-align: center;
+}
+
+/* 5.2. About Class Content Body */
+
+.about .content-body-title {
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+.about .content-body-title h2 {
+	margin-top: 0px;
+}
+
+.about .content-body {
+    text-align: center;
+}
+
+.about .content-body h3 {
+    margin-top: 0px !important;
+}
+
+.about .content-body p {
+    line-height: 30px;
+    color: #999999;
+    font-size: 14px;
+	margin: 0px;
+}
+
+/* 5.3. About Class Content Body Responsive Style */
+
+@media(max-width: 767px) {
+	.about .content-body {
+        float: none;
+		text-align: center;
+		margin: 0 auto;
+    }
+    .about .content-body p {
+        margin-bottom: 30px;
+    }
+	.about .content-body-title {
+		text-align: center;
+	}
+}
+
+/* 6. Features Class */
+
+.features {
+    background-color: #FFFFFF;
+    padding: 80px 0px;
+}
+
+.features-second-bg {
+    background-color: #EEF1F4;
+}
+
+.features h2 {
+    font-weight: 600;
+}
+
+/* 6.1. Features Class Main Content Body */
+
+.features .content-body-main {
+    text-align: left;
+}
+
+.features .content-body-main p {
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+/* 6.2. Features Class Main Content Body Image */
+
+.features .content-body-image img {
+    box-shadow: 0 13px 35px rgba(98, 100, 112, 0.25);
+}
+
+/* 6.3. Features Class Main Content Body Responsive Style */
+
+@media(max-width: 992px) {
+    .features .content-body-main {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .features .content-body-main h2 { 
+        margin: 0px 0px 30px 0px; 
+    }
+    .features .content-body-main p {
+        margin-bottom: 30px;
+    }
+}
+
+/* 6.4. Features Class Second Section */
+
+.features h4 {
+    font-weight: 400;
+}
+
+/* 6.5. Features Class Content Body */
+
+.features .content-body {
+    text-align: center;
+}
+
+.features .content-body h3 {
+    margin-top: 0px !important;
+}
+
+.features .content-body p {
+    line-height: 30px;
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+/* 6.6. Features Second Section Class Icon */
+
+.features .icon-container {
+    height: 80px;
+    width: 80px;
+    line-height: 75px;
+    display: block;
+    margin: 0 auto;
+}
+
+.features .icon-container img {
+    height: 52px;
+    width: 52px;
+    line-height: 75px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 6.7. Features Second Section Content Body Responsive Style */
+
+@media(max-width: 767px) {
+    .features .content-body {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .features .content-body p {
+        margin-bottom: 30px;
+    }
+}
+
+/* 7. Subcscribe Class */
+
+.subscribe {
+    padding: 80px 0px;
+    background: url(../images/pexels-photo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color: #FFFFFF;
+}
+
+.subscribe h2 {
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+/* 7.1. Subscribe Class Content */
+
+.subscribe .content-body {
+    text-align: left;
+}
+
+/* 7.2. Subscribe Class Form */
+
+.subscribe .form-control {
+    box-shadow: none;
+    border-radius: 0px;
+    height: 44px;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.subscribe .form-control:focus {
+    border-color: #008ed6;
+    box-shadow: none;
+    outline: none;
+    transition: all 0.30s ease;
+}
+
+.subscribe .btn {
+    border-radius: 0px;
+    background: #008ED6;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+    transition: all 0.30s ease;
+    font-size: 16px;
+}
+
+.subscribe .btn:hover {
+    border: 1px solid transparent;
+    background: #009ff0;
+    transition: all 0.30s ease;
+}
+
+/* 7.3. Subscribe Class Responsive Style */
+
+@media(max-width: 767px) {
+    .subscribe .content-body {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .subscribe .btn-centered {
+        text-align: center;
+    }
+}
+
+@media(max-width: 992px) { 
+    .subscribe .content-body {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+/* 8. App Class */
+
+.app {
+    background-color: #EEF1F4;
+    padding: 30px 0px;
+}
+
+.app h2 {
+	font-weight: 600;
+}
+
+/* 8.1. App Image */
+
+.app img {
+	margin: 0 auto;
+}
+
+/* 8.2. App Content */
+
+.app-content-body {
+	text-align: right;
+	margin-top: 50px;
+}
+
+.app .app-content-body p {
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+.app .app-content-body .buttons {
+	margin-top: 30px;
+}
+
+/* 8.3. App Class Body Responsive Style */
+
+@media(max-width: 767px) {
+	.app-content-body {
+		text-align: center;
+		margin-top: 0px;
+	}
+}
+
+/* 9. Contact Class */
+
+.contact {
+	background-color: #FFFFFF;
+    padding: 80px 0px;
+}
+
+/* 9.1. Contact Class Content */
+
+.contact .content-body-title {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.contact .content-body-title h2 {
+	margin-top: 0px;
+}
+
+/* 9.2. Contact Class Form */
+
+.contact .form-control {
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-shadow: none !important;
+}
+
+.contact .form-control .custom-height {
+	height: 40px;
+}
+
+.contact .form-control:focus {
+	border-color: #222222;
+}
+
+.contact form label {
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.contact .btn {
+    background: #008ED6;
+    color: #FFFFFF;
+    border: 2px solid transparent;
+	margin-top: 40px;
+}
+
+.contact .btn:hover {
+    border: 2px solid #008ED6;
+    background-color: transparent;
+    transition: all 0.30s ease;
+	color: #008ED6;
+}
+
+/* 9.3. Contact Class Body Responsive Style */
+
+@media(max-width: 767px) {
+	.contact form {
+		text-align: center;
+	}
+	.contact .content-body-title {
+		text-align: center;
+		margin-top: 0px;
+	}
+}
+
+/* 10. Footer Class */
+
+.footer {
+	background-color: #111;
+	color: #FFFFFF;
+	padding: 50px 0px;
+}
+
+/* 10.1. Footer Class Content Body */
+
+.footer h3 {
+	font-weight: 300;
+	margin-top: 0px
+}
+
+.footer p {
+    font-weight: 400;
+    color: #727272;
+	line-height: 26px;
+}
+
+.footer li p {
+	margin-bottom: 3px;
+}
+
+.footer a {
+    color: #727272;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* 10.2 Footer Class Body Responsive Style */
+
+@media(max-width: 767px) {
+	.footer {
+		text-align: center;
+	}
+	.footer h3 {
+		margin: 20px 0px;;
+	}
+}
