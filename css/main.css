@@ -408,6 +408,10 @@ img {
     text-transform: uppercase;
 }
 
+.features-image {
+    margin-top: 100px;
+}
+
 /* 6.1. Features Class Main Content Body */
 
 .features .content-body-main {
