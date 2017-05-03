@@ -4,9 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
+        <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+
         <!-- Page Title -->
-        <title>Volt</title>
+        <title>Smartsheet Connector | Online extension for direct integration between Smartsheet and Atlassian JIRA</title>
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +21,9 @@
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
 
     <body data-spy="scroll" data-target="#mainNav" data-offset="70">
@@ -33,7 +38,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="images/logo.png" alt="Logo">
+                        <img src="images/logo_long_white.png" alt="Smartsheet Connector Logo" width="150">
                     </a>
                 </div>
 
@@ -43,7 +48,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#subscribe">Subscribe</a></li>
-						<li><a href="#app">App</a></li>
+						<li><a href="#app">Price</a></li>
 						<li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -51,61 +56,60 @@
         </nav>
         <!-- /NAVIGATION BAR -->
 
-        <!-- HEADER -->
+        <!-- HERO -->
         <div class="header" id="home">
             <div class="intro-section">
-				<img src="images/logo.png">
-				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. <br>Ut molestie erat ac magna scelerisque!</p>
+				<img src="images/logo_white.png" width="400" alt="Smartsheet Connector Logo" class="hero-logo">
+				<p>IT’S ALL ABOUT EFFICIENCY, REAL TIME VISIBILITY &amp; COLLABORATION</p>
 
-				<a href="#features" class="btn btn-round btn-white-outline"><i class="fa fa-bolt" aria-hidden="true"></i> Know More</a>
+				<a href="#features" class="btn btn-round btn-white-outline">Learn More</a>
             </div>
         </div>
-        <!-- /HEADER -->
+        <!-- /HERO -->
 
         <!-- ABOUT -->
         <div class="about" id="about">
             <div class="container">
 				<div class="content-body-title">
-					<h2>About Us</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<h2>ABOUT US</h2>
 				</div>
-				
+
                 <div class="row">
                     <!-- ITEM -->
                     <div class="col-md-4 col-xs-12">
-                        <div class="icon-container">
-                            <img src="images/layers.png">
-                        </div>
+                        <!--<div class="icon-container">
+                            <i class="about-icon fa fa-plug" aria-hidden="true"></i>
+                        </div>-->
 
                         <div class="content-body">
-                            <h4>Awesome Design</h4>
-                            <p>Voluptatem ad provident non veritatis beatae cupiditate amet reiciendis.</p>
+                            <h4>Connect your tools</h4>
+                            <p>Smartsheet connector is an online extension that allows direct integration between Smartsheet and Atlassian JIRA.</p>
                         </div>
                     </div>
                     <!-- /ITEM -->
 
                     <!-- ITEM -->
                     <div class="col-md-4 col-xs-12">
-                        <div class="icon-container">
-                            <img src="images/like.png">
-                        </div>
+                        <!--<div class="icon-container">
+                            <i class="about-icon fa fa-mouse-pointer" aria-hidden="true"></i>
+                        </div>-->
 
                         <div class="content-body">
-                            <h4>User Friendly</h4>
-                            <p>Voluptatem ad provident non veritatis beatae cupiditate amet reiciendis.</p>
+                            <h4>Simply Click a Button</h4>
+                            <p>Create a project plan using Smartsheet and directly create tasks in JIRA or just import all your JIRA tasks in your Smartsheet by simply clicking a button.</p>
                         </div>
                     </div>
                     <!-- /ITEM -->
 
                     <!-- ITEM -->
                     <div class="col-md-4 col-xs-12">
-                        <div class="icon-container">
-                            <img src="images/operator.png">
-                        </div>
+                        <!--<div class="icon-container">
+                            <i class="about-icon fa fa-refresh" aria-hidden="true"></i>
+                        </div>-->
 
                         <div class="content-body">
-                            <h4>Awesome Support</h4>
-                            <p>Voluptatem ad provident non veritatis beatae cupiditate amet reiciendis.</p>
+                            <h4>Easily Sync</h4>
+                            <p>Use JIRA for task management and quickly and easily sync between the two systems.</p>
                         </div>
                     </div>
                     <!-- /ITEM -->
@@ -119,15 +123,51 @@
             <div class="container">
                 <div class="row">
                     <!-- ITEM -->
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="content-body-main">
-                            <h2>An Awesome Feature</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur enim lorem, porttitor sed magna et, malesuada rhoncus lacus. Sed orci lorem, consequat nec turpis in, volutpat suscipit nunc. Pellentesque semper enim a sem euismod, nec placerat diam pharetra. In mattis mauris vehicula ex finibus ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul class="feature-list feature-list-left">
+                                <li>
+                                    <img src="images/repeat.png" alt="Connect your tools" class="feature-icon">
+                                    <h2>Instant Sync</h2>
+                                    <p>All changes are synchronized in real-time.</p>
+                                </li>
+                                <li>
+                                    <img src="images/checked.png" alt="Create JIRA tasks automcatically" class="feature-icon">
+                                    <h2>Create JIRA tasks automatically</h2>
+                                    <p>Get your jira tasks created in no time.</p>
+                                </li>
+                                <li>
+                                    <img src="images/levels.png" alt="Filters" class="feature-icon">
+                                    <h2>Filters</h2>
+                                    <p>Set-up filters to define what information you want to flow from Smartsheet to JIRA and the other way around.</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4 visible-md visible-lg">
                         <div class="content-body-image">
                         	<img src="images/software-.jpg" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content-body-main">
+                            <ul class="feature-list feature-list-right">
+                                <li>
+                                    <img src="images/list.png" alt="Custom Field Mapping" class="feature-icon">
+                                    <h2>Custom Field Mapping</h2>
+                                    <p>Don’t want to update all fields? Update only the fields you want.</p>
+                                </li>
+                                <li>
+                                    <img src="images/files.png" alt="Bulk Update" class="feature-icon">
+                                    <h2>Bulk Update</h2>
+                                    <p>Be on top of your game without worrying about administrative tasks.</p>
+                                </li>
+                                <li>
+                                    <img src="images/heart.png" alt="User Friendly" class="feature-icon">
+                                    <h2>User friendly</h2>
+                                    <p>Synchronise your work by simply clicking a button.</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <!-- /ITEM -->
@@ -142,8 +182,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="content-body">
-                            <h2>Subscribe to us</h2>
-                            <p>Voluptatem ad provident non veritatis beatae cupiditate amet reiciendis. Voluptatem ad provident non veritatis beatae cupiditate amet reiciendis.</p>
+                            <h2>SUBSCRIBE</h2>
+                            <p>To get the latest updates on Smartsheet Connector</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -159,58 +199,110 @@
             </div>
         </div>
         <!-- /SUBSCRIBE -->
-		
+
 		<!-- APP -->
         <div class="app" id="app">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="images/2_iphone7plusgold_portrait.png" class="img-responsive">
+                    <h2 class="align-center">PRICES</h2>
+                    <br />
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="price-card">
+                            <img src="images/standard.png" alt="Standard" class="price-icon">
+                            <h3>Standard</h3>
+                            <p class="price-price">FREE</p>
+                            <div class="price-separator"></div>
+                            <ul class="price-list">
+                                <li>Feature 1</li>
+                                <li>Feature 2</li>
+                                <li>Feature 3</li>
+                            </ul>
+                            <br />
+                            <button type="button" class="btn btn-dark">Buy Now</button>
+                        </div>
                     </div>
-					
-					<div class="col-md-6">
-						<div class="app-content-body">
-                        	<h2>Download the Mobile App</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur enim lorem, porttitor sed magna et, malesuada rhoncus lacus. Sed orci lorem, consequat nec turpis in, volutpat suscipit nunc. Pellentesque semper enim a sem euismod, nec placerat diam pharetra. In mattis mauris vehicula ex finibus ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							
-							<div class="buttons">
-								<img src="images/apple.png">
-								<img src="images/google.png">
-							</div>
-						</div>
+                    <div class="col-md-4">
+                        <div class="price-card">
+                            <img src="images/professional.png" alt="Professional" class="price-icon">
+                            <h3>Professional</h3>
+                            <p class="price-price">$149/month</p>
+                            <div class="price-separator"></div>
+                            <ul class="price-list">
+                                <li>Feature 1</li>
+                                <li>Feature 2</li>
+                                <li>Feature 3</li>
+                                <li>Feature 5</li>
+                            </ul>
+                            <br />
+                            <button type="button" class="btn btn-dark">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="price-card">
+                            <img src="images/premium.png" alt="Premium" class="price-icon">
+                            <h3>Premium</h3>
+                            <p class="price-price">$500/month</p>
+                            <div class="price-separator"></div>
+                            <ul class="price-list">
+                                <li>Feature 1</li>
+                                <li>Feature 2</li>
+                                <li>Feature 3</li>
+                                <li>Feature 4</li>
+                                <li>Feature 5</li>
+                            </ul>
+                            <br />
+                            <button type="button" class="btn btn-dark">Buy Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            $(function() {
+                var maxHeight = 0,
+                    $priceLists = $('.price-list');
+
+                $priceLists.each(function() {
+                    var thisHeight = $(this).outerHeight();
+                    if (thisHeight > maxHeight)
+                        maxHeight = thisHeight;
+                });
+                if (maxHeight > 0)
+                    $priceLists.css('height', maxHeight);
+            });
+        </script>
         <!-- /APP -->
-		
+
 		<!-- CONTACT -->
 		<div class="contact" id="contact">
 			<div class="container">
 				<div class="content-body-title">
 					<h2>Contact Us</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p>Questions? Send us an email and we'll be glad to help.</p>
 				</div>
-				
+
 				<div class="row">
-					<form>
+					<form action="https://formspree.io/edibouazza@gmail.com" method="POST">
   						<div class="col-md-6">
 							<div class="form-group">
     							<label for="exampleInputEmail1">Name</label>
-    							<input type="email" class="form-control custom-height" id="exampleInputEmail1" placeholder="Enter your name">
+    							<input type="text" class="form-control custom-height" id="exampleInputEmail1" placeholder="Enter your name" name="name">
 							</div>
   						</div>
   						<div class="col-md-6">
 							<div class="form-group">
     							<label for="exampleInputPassword1">Email</label>
-    							<input type="password" class="form-control custom-height" id="exampleInputPassword1" placeholder="Enter your Email Address">
+    							<input type="email" class="form-control custom-height" id="exampleInputPassword1" placeholder="Enter your Email Address" name="_replyto" required>
 							</div>
   						</div>
 						<div class="col-md-12">
 							<label for="exampleInputMessage1">Message</label>
-							<textarea class="form-control" rows="5" id="exampleInputMessage1" placeholder="Enter your Message"></textarea>
+							<textarea class="form-control" rows="5" id="exampleInputMessage1" placeholder="Enter your Message" name="message" required></textarea>
 						</div>
-						
+
 						<div class="col-md-12 text-center">
 							<button type="submit" class="btn btn-dark">Submit</button>
 						</div>
@@ -219,33 +311,37 @@
 			</div>
 		</div>
 		<!-- /CONTACT -->
-		
+
 		<!-- FOOTER -->
 		<footer class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
 						<h3>About Us</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur enim lorem, porttitor sed magna et, malesuada rhoncus lacus. Sed orci lorem, consequat nec turpis in, volutpat suscipit nunc. Pellentesque semper enim a sem euismod, nec placerat diam pharetra. In mattis mauris vehicula.</p>
-						
-						<p>&copy; Volt 2017. All Rights Reserved</p>
+						<p>Smartsheet connector is an online extension that allows direct integration between Smartsheet and Atlassian JIRA.</p>
+
+						<p>&copy; Smartsheet Connector 2017. All Rights Reserved</p>
 					</div>
 					<div class="col-md-3">
-                    	<h3>Lorem ipsum</h3>
-                    	<ul class="list-unstyled">
-                        	<li><p><a href="#">Lorem ipsum</a></p></li>
-                        	<li><p><a href="#">Lorem ipsum</a></p></li>
-                        	<li><p><a href="#">Lorem ipsum</a></p></li>
-                        	<li><p><a href="#">Lorem ipsum</a></p></li>
-                    	</ul>
                 	</div>
                 	<div class="col-md-3">
-                    	<h3>Lorem ipsum</h3>
-                    	<ul class="list-unstyled">
-                        	<li><p><a href="#">Lorem ipsum</a></p></li>
-                        	<li><p><a href="#">Lorem ipsum</a></p></li>
-							<li><p><a href="#">Lorem ipsum</a></p></li>
-                        	<li><p><a href="#">Lorem ipsum</a></p></li>
+                    	<h3>Follow us</h3>
+                    	<ul class="list-unstyled social-links">
+                        	<li>
+                                <a href="https://instagram.com" title="Instagram">
+                                    <i class="social-icon fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        	<li>
+                                <a href="https://facebook.com" title="Facebook">
+                                    <i class="social-icon fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        	<li>
+                                <a href="https://twitter.com" title="Twitter">
+                                    <i class="social-icon fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </li>
                     	</ul>
                 	</div>
 				</div>
