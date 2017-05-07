@@ -22,11 +22,21 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700" rel="stylesheet">
 
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P97TQS8');</script>
+        <!-- End Google Tag Manager -->
     </head>
 
     <body data-spy="scroll" data-target="#mainNav" data-offset="70">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P97TQS8"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
         <!-- NAVIGATION BAR -->
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
@@ -127,7 +137,7 @@
                     </div>
                     <div class="col-sm-12">
                         <div class="align-center">
-                            <a href="#price" class="btn btn-round btn-dark">Buy Now</a>
+                            <a href="#contact" class="btn btn-round btn-dark">Contact us</a>
                         </div>
                     </div>
                     <!-- /ITEM -->
@@ -178,7 +188,7 @@
                                 <li>1 license</li>
                             </ul>
                             <br />
-                            <button type="button" class="btn btn-dark">Buy Now</button>
+                            <a href="#contact" class="btn btn-dark">Contact Us</a>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -191,7 +201,7 @@
                                 <li>Up to 5 licenses</li>
                             </ul>
                             <br />
-                            <button type="button" class="btn btn-dark">Buy Now</button>
+                            <a href="#contact" class="btn btn-dark">Contact Us</a>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -204,7 +214,7 @@
                                 <li>Up to 10 licenses</li>
                             </ul>
                             <br />
-                            <button type="button" class="btn btn-dark">Buy Now</button>
+                            <a href="#contact" class="btn btn-dark">Contact Us</a>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -223,21 +233,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            $(function() {
-                var maxHeight = 0,
-                    $priceLists = $('.price-list');
-
-                $priceLists.each(function() {
-                    var thisHeight = $(this).outerHeight();
-                    if (thisHeight > maxHeight)
-                        maxHeight = thisHeight;
-                });
-                if (maxHeight > 0)
-                    $priceLists.css('height', maxHeight);
-            });
-        </script>
         <!-- /APP -->
 
 		<!-- CONTACT -->
@@ -275,31 +270,6 @@
 				</div>
 			</div>
 		</div>
-        <script>
-            var $contactForm = $('#contact-form'),
-                $contactFeedback = $('#contact-feedback');
-
-            $contactForm.submit(function(e) {
-                e.preventDefault();
-                $.ajax({
-                    url: 'https://formspree.io/edibouazza@gmail.com',
-                    method: 'POST',
-                    data: $(this).serialize(),
-                    dataType: 'json',
-                    beforeSend: function() {
-                        $contactFeedback.html('<i class="fa fa-cog fa-spin" aria-hidden="true"></i> Sending message…');
-                    },
-                    success: function(data) {
-                        $contactForm.find('.alert--loading').hide();
-                        $contactFeedback.html('<i class="fa fa-check" aria-hidden="true"></i> Message sent!');
-                    },
-                    error: function(err) {
-                        $contactForm.find('.alert--loading').hide();
-                        $contactFeedback.html('<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Oops, there was an error, please try again.');
-                    }
-                });
-            });
-        </script>
 		<!-- /CONTACT -->
 
 		<!-- FOOTER -->
@@ -341,12 +311,12 @@
 		<!-- /FOOTER -->
 
         <!-- jQuery  -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js" defer></script>
 
         <!-- Custom -->
-        <script src="js/custom.min.js"></script>
+        <script src="js/custom.min.js" defer></script>
     </body>
 </html>

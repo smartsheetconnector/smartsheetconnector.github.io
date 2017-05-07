@@ -27,11 +27,56 @@ $(document).ready(function() {
 				scrollTop: $(hash).offset().top
 			}, 1000, function(){
 
-				// Add hash (#) to end of the URL when done scrolling 
+				// Add hash (#) to end of the URL when done scrolling
 				window.location.hash = hash;
 
 		    });
 		}
-	
+
 	});
 });
+
+// contact form
+(function () {
+	$(function() {
+		var $contactForm = $('#contact-form'),
+			$contactFeedback = $('#contact-feedback');
+
+		$contactForm.submit(function(e) {
+			e.preventDefault();
+			$.ajax({
+				url: 'https://formspree.io/edibouazza@gmail.com',
+				method: 'POST',
+				data: $(this).serialize(),
+				dataType: 'json',
+				beforeSend: function() {
+					$contactFeedback.html('<i class="fa fa-cog fa-spin" aria-hidden="true"></i> Sending message…');
+				},
+				success: function(data) {
+					$contactForm.find('.alert--loading').hide();
+					$contactFeedback.html('<i class="fa fa-check" aria-hidden="true"></i> Message sent!');
+				},
+				error: function(err) {
+					$contactForm.find('.alert--loading').hide();
+					$contactFeedback.html('<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Oops, there was an error, please try again.');
+				}
+			});
+		});
+	});
+})();
+
+// same height
+(function () {
+	$(function() {
+		var maxHeight = 0,
+			$priceLists = $('.price-list');
+
+		$priceLists.each(function() {
+			var thisHeight = $(this).outerHeight();
+			if (thisHeight > maxHeight)
+				maxHeight = thisHeight;
+		});
+		if (maxHeight > 0)
+			$priceLists.css('height', maxHeight);
+	});
+})();
