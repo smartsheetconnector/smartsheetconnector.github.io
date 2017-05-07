@@ -64,19 +64,3 @@ $(document).ready(function() {
 		});
 	});
 })();
-
-// same height
-(function () {
-	$(function() {
-		var maxHeight = 0,
-			$priceLists = $('.price-list');
-
-		$priceLists.each(function() {
-			var thisHeight = $(this).outerHeight();
-			if (thisHeight > maxHeight)
-				maxHeight = thisHeight;
-		});
-		if (maxHeight > 0)
-			$priceLists.css('height', maxHeight);
-	});
-})();

@@ -790,6 +790,7 @@ img {
 
 .social-links {
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 .social-links li {
     display: inline-block;
@@ -797,6 +798,10 @@ img {
 }
 .fa.social-icon {
     font-size: 30px;
+}
+
+.footer-security {
+    display: block;
 }
 
 /* 10.2 Footer Class Body Responsive Style */
