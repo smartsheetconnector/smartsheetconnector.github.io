@@ -12,8 +12,7 @@ $(document).ready(function() {
 
 	// SMOOTH SCROLLING //
 
-	$("a").on('click', function(event) {
-
+	$("a").not(".external").on('click', function(event) {
 		// Make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
 			event.preventDefault();
@@ -45,7 +44,7 @@ $(document).ready(function() {
 		$contactForm.submit(function(e) {
 			e.preventDefault();
 			$.ajax({
-				url: 'https://formspree.io/edibouazza@gmail.com',
+				url: 'https://formspree.io/info@smartsheetconnector.com',
 				method: 'POST',
 				data: $(this).serialize(),
 				dataType: 'json',
